@@ -44,7 +44,7 @@ init-git:
 	@echo "Created first commit"
 	@git branch -M main
 	@echo "Set the primary branch to 'main'"
-	@git remote add origin git@github.com:kawright/${PROJ_NAME}.git
+	@git remote add origin git@github.com:kawright/lib${PROJ_NAME}.git
 	@echo "Linked repository to remote GitHub repository"
 	@git push -u origin main
 	@echo "Pushed first commit to remote repository"
@@ -68,5 +68,5 @@ uninstall:
 	@echo "lib${PROJ_NAME} successfully uninstalled"
 
 ver:
-	@ver -V ${PROJ_VER}
+	@ver -s -V ${PROJ_VER}
 	@echo "Updated version number to ${PROJ_VER}"

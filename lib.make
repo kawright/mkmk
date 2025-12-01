@@ -69,7 +69,7 @@ init-git:
 	@echo "Created first commit"
 	@git branch -M main
 	@echo "Set the primary branch to 'main'"
-	@git remote add origin git@github.com:kawright/${PROJ_NAME}.git
+	@git remote add origin git@github.com:kawright/lib${PROJ_NAME}.git
 	@echo "Linked repository to remote GitHub repository"
 	@git push -u origin main
 	@echo "Pushed first commit to remote repository"
@@ -78,7 +78,7 @@ init-git:
 install: build/lib/lib${PROJ_NAME}.so
 	@mkdir -p /usr/local/etc/lib${PROJ_NAME}	
 	@cp ${PROJ_NAME}.h /usr/local/include/${PROJ_NAME}.h
-	@echo "Copied fileio.h"
+	@echo "Copied ${PROJ_NAME}.h"
 	@cp build/lib/lib${PROJ_NAME}.so /usr/local/lib/lib${PROJ_NAME}.so
 	@echo "Copied lib${PROJ_NAME}.so"
 	@cp .ver /usr/local/etc/lib${PROJ_NAME}/.ver
@@ -97,6 +97,6 @@ uninstall:
 	@echo "lib${PROJ_NAME} successfully uninstalled"
 
 ver:
-	@ver -V ${PROJ_VER}
+	@ver -s -V ${PROJ_VER}
 	@echo "Updated version number to ${PROJ_VER}"
 

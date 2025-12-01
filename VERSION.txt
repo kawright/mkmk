@@ -1,6 +1,6 @@
 mkmk - makefile wizard
 
-Version Number: 1.0
-Version Date: 2025-11-29 21:22:41
-Build Number: 3
-Build Date: 2025-11-29 21:51:44
+Version Number: 1.1
+Version Date: 2025-11-30 16:56:43
+Build Number: 5
+Build Date: 2025-11-30 16:58:01

@@ -2,7 +2,7 @@
 
 PROJ_NAME := mkmk
 PROJ_DESC := "makefile wizard"
-PROJ_VER := 1.0
+PROJ_VER := 1.1
 
 # ----- COMPILER CONFIGURATION -----
 
@@ -13,8 +13,13 @@ CC_OPTS := \
 	# -g \
 	# -DDEBUG_MODE
 CC_LIBS := \
+	-largvp \
 	-lerr \
-	-lmem
+	-lfileio \
+	-lmem \
+	-lprint \
+	-lprompt \
+	-lstr
 
 # ----- REAL TARGETS -----
 
